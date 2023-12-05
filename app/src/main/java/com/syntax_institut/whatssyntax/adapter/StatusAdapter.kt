@@ -3,9 +3,7 @@ package com.syntax_institut.whatssyntax.adapter
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-
 import com.syntax_institut.whatssyntax.data.model.Contact
-import com.syntax_institut.whatssyntax.databinding.FragmentStatusBinding
 import com.syntax_institut.whatssyntax.databinding.StatusItemBinding
 
 class StatusAdapter (
@@ -31,10 +29,10 @@ class StatusAdapter (
      */
     override fun onBindViewHolder(holder: ItemViewHolder, position: Int) {
         val item = dataset[position]
+
         holder.binding.nameStatusTV.text = item.name
         holder.binding.avatarStatusIV.setImageResource(item.image)
         holder.binding.statusTV.text = item.status?.text
-
 
 
     }

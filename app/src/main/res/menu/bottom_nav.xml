@@ -11,10 +11,11 @@
         android:icon="@drawable/icon_status"
         android:title="Status" />
     <item
-
+        android:id="@+id/callListFragment"
         android:icon="@drawable/icon_call"
         android:title="Call" />
     <item
+        android:id="@+id/profileFragment"
         android:icon="@drawable/icon_settings"
         android:title="Settings" />
 </menu>

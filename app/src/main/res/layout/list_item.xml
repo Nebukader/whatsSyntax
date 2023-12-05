@@ -3,6 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_margin="4dp"
+    android:background="#252525"
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
@@ -18,18 +19,20 @@
         android:id="@+id/nameTV"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="60dp"
+        android:layout_marginStart="30dp"
         android:layout_marginTop="32dp"
+        android:textColor="@color/white"
         android:text=""
-        tools:text="@tools:sample/full_names"
         app:layout_constraintStart_toEndOf="@+id/avatarIV"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="@tools:sample/full_names" />
 
     <TextView
         android:id="@+id/statusTV"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
+        android:textColor="@color/white"
         android:text=""
         tools:text="Ich find diesen Kurs Doof"
         app:layout_constraintEnd_toEndOf="@+id/nameTV"

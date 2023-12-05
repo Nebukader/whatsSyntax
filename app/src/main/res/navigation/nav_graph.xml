@@ -12,10 +12,26 @@
         <action
             android:id="@+id/action_chatFragment_to_statusFragment"
             app:destination="@id/statusFragment" />
+        <action
+            android:id="@+id/action_chatFragment_to_callListFragment"
+            app:destination="@id/callListFragment" />
+        <action
+            android:id="@+id/action_chatFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
     </fragment>
     <fragment
         android:id="@+id/statusFragment"
         android:name="com.syntax_institut.whatssyntax.data.ui.StatusFragment"
         android:label="fragment_status"
         tools:layout="@layout/fragment_status" />
+    <fragment
+        android:id="@+id/callListFragment"
+        android:name="com.syntax_institut.whatssyntax.data.ui.CallListFragment"
+        android:label="call_screen"
+        tools:layout="@layout/call_screen" />
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.syntax_institut.whatssyntax.data.ui.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" />
 </navigation>
