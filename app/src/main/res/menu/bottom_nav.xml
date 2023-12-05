@@ -3,12 +3,15 @@
     xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
+        android:id="@+id/chatFragment"
         android:icon="@drawable/icon_chat"
         android:title="Chat" />
     <item
+        android:id="@+id/statusFragment"
         android:icon="@drawable/icon_status"
         android:title="Status" />
     <item
+
         android:icon="@drawable/icon_call"
         android:title="Call" />
     <item

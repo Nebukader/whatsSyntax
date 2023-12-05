@@ -3,36 +3,19 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/listFragment">
-
+    app:startDestination="@id/chatFragment">
     <fragment
         android:id="@+id/chatFragment"
         android:name="com.syntax_institut.whatssyntax.data.ui.ChatFragment"
         android:label="fragment_chat"
-        tools:layout="@layout/fragment_chat" >
-        <action
-            android:id="@+id/action_chatFragment_to_listFragment"
-            app:destination="@id/listFragment" />
-    </fragment>
-    <fragment
-        android:id="@+id/profileFragment"
-        android:name="com.syntax_institut.whatssyntax.data.ui.ProfileFragment"
-        android:label="fragment_profile"
-        tools:layout="@layout/fragment_profile" >
-        <action
-            android:id="@+id/action_profileFragment_to_listFragment"
-            app:destination="@id/listFragment" />
-    </fragment>
-    <fragment
-        android:id="@+id/listFragment"
-        android:name="com.syntax_institut.whatssyntax.data.ui.ListFragment"
-        android:label="fragment_list"
         tools:layout="@layout/fragment_list" >
         <action
-            android:id="@+id/action_listFragment_to_chatFragment"
-            app:destination="@id/chatFragment" />
-        <action
-            android:id="@+id/action_listFragment_to_profileFragment"
-            app:destination="@id/profileFragment" />
+            android:id="@+id/action_chatFragment_to_statusFragment"
+            app:destination="@id/statusFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/statusFragment"
+        android:name="com.syntax_institut.whatssyntax.data.ui.StatusFragment"
+        android:label="fragment_status"
+        tools:layout="@layout/fragment_status" />
 </navigation>
