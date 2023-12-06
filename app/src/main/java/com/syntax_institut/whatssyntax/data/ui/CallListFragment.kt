@@ -34,8 +34,9 @@ class CallListFragment: Fragment() {
         // Log-Ausgabe zum Überprüfen, ob Daten abgerufen wurden
         Log.d("ListFragment", "Dataset size: ${datasetCall.size}")
 
-        val adapter = CallAdapter(datasetCall)
-        binding.callListRV.adapter = adapter
+        val dataset = Datasource().getCalls()
+        val callAdapter = CallAdapter(requireActivity(), dataset)
+        binding.callListRV.adapter = callAdapter
 
 
         // Log-Ausgabe zum Überprüfen, ob Adapter gesetzt wurde

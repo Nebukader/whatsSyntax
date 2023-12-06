@@ -1,5 +1,8 @@
 package com.syntax_institut.whatssyntax.adapter
-
+import android.app.Activity
+import android.content.Intent
+import android.net.Uri
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -7,8 +10,9 @@ import androidx.recyclerview.widget.RecyclerView
 import com.syntax_institut.whatssyntax.data.model.Call
 import com.syntax_institut.whatssyntax.databinding.CallListItemBinding
 
-class CallAdapter (
-    private val dataset: List<Call>
+class CallAdapter(
+    private val activity: Activity,
+    private val dataset: List<Call>,
 ) : RecyclerView.Adapter<CallAdapter.ItemViewHolder>() {
 
     /**
@@ -40,6 +44,13 @@ class CallAdapter (
 
         holder.binding.callSignAcceptIV.visibility = if (item.accepted) View.VISIBLE else View.GONE
         holder.binding.missedCallSignIV.visibility = if (!item.accepted) View.VISIBLE else View.GONE
+
+        holder.binding.cardCallCV.setOnClickListener{
+            val callNumber = item.contact.number
+            Log.d("CallNumber", callNumber)
+            dialPhoneNumber(callNumber)
+
+        }
     }
 
     /**
@@ -48,4 +59,17 @@ class CallAdapter (
     override fun getItemCount(): Int {
         return dataset.size
     }
+
+    fun dialPhoneNumber(phoneNumber: String) {
+        val packageManager = activity.packageManager
+        val intent = Intent(Intent.ACTION_DIAL).apply {
+            data = Uri.parse("tel:$phoneNumber")
+        }
+        if (intent.resolveActivity(packageManager) != null) {
+            activity.startActivity(intent)
+        }else{
+            activity.startActivity(intent)
+        }
+    }
+
 }
