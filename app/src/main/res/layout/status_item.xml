@@ -7,36 +7,54 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
-    <ImageView
-        android:id="@+id/avatarStatusIV"
-        android:layout_width="120dp"
-        android:layout_height="120dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:srcCompat="@drawable/pp_01" />
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
 
-    <TextView
-        android:id="@+id/nameStatusTV"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="32dp"
-        android:textColor="@color/white"
-        android:text=""
-        app:layout_constraintStart_toEndOf="@+id/avatarStatusIV"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:text="@tools:sample/full_names" />
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/gradient">
 
-    <TextView
-        android:id="@+id/statusTV"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text=""
-        android:textColor="@color/white"
-        tools:text="Ich find diesen Kurs Doof"
-        app:layout_constraintEnd_toEndOf="@+id/nameStatusTV"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/nameStatusTV"
-        app:layout_constraintTop_toBottomOf="@+id/nameStatusTV" />
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/avatarStatusIV"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_margin="8dp"
+                android:scaleType="centerCrop"
+                android:padding="5dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:shapeAppearanceOverlay="@style/circular"
+                app:strokeColor="#380397"
+                app:strokeWidth="2dp"
+                tools:srcCompat="@drawable/pp_01" />
+
+            <TextView
+                android:id="@+id/nameStatusTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="32dp"
+                android:text=""
+                android:textColor="@color/white"
+                app:layout_constraintStart_toEndOf="@+id/avatarStatusIV"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="@tools:sample/full_names" />
+
+            <TextView
+                android:id="@+id/statusTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="8dp"
+                android:text=""
+                android:textColor="@color/white"
+                app:layout_constraintStart_toEndOf="@+id/avatarStatusIV"
+                app:layout_constraintTop_toBottomOf="@+id/nameStatusTV"
+                tools:text="Ich find diesen Kurs Doof" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
