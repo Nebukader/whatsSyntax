@@ -42,8 +42,9 @@ class CallAdapter(
         holder.binding.avatarCallIV.setImageResource(item.contact.image)
         holder.binding.lastCallTv.text = item.time
 
-        holder.binding.callSignAcceptIV.visibility = if (item.accepted) View.VISIBLE else View.GONE
-        holder.binding.missedCallSignIV.visibility = if (!item.accepted) View.VISIBLE else View.GONE
+        holder.binding.callSignAcceptedIV.visibility = if (item.accepted) View.VISIBLE else View.GONE
+        holder.binding.callSignNotAcceptedIV.visibility = if(!item.incoming && !item.accepted) View.VISIBLE else View.GONE
+        holder.binding.missedCallSignIV.visibility = if (item.incoming && !item.accepted) View.VISIBLE else View.GONE
 
         holder.binding.cardCallCV.setOnClickListener{
             val callNumber = item.contact.number
