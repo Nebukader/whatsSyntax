@@ -2,12 +2,12 @@ package com.syntax_institut.whatssyntax.data.ui
 
 import android.os.Bundle
 import android.util.Log
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
-import com.syntax_institut.whatssyntax.adapter.ItemAdapter
+import com.syntax_institut.whatssyntax.adapter.ChatAdapter
 import com.syntax_institut.whatssyntax.data.Datasource
 import com.syntax_institut.whatssyntax.databinding.FragmentListBinding
 
@@ -37,10 +37,12 @@ class ChatFragment : Fragment() {
         // Log-Ausgabe zum Überprüfen, ob Daten abgerufen wurden
         Log.d("ListFragment", "Dataset size: ${datasetChat.size}")
 
-        val adapter = ItemAdapter(datasetChat)
+
+
+        val adapter = ChatAdapter(datasetChat)
         binding.recyclerView.adapter = adapter
 
-        // Log-Ausgabe zum Überprüfen, ob Adapter gesetzt wurde
-        Log.d("ListFragment", "Adapter set successfully")
+
+
     }
 }

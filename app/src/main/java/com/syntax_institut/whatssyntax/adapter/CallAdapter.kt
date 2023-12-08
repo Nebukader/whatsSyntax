@@ -37,7 +37,7 @@ class CallAdapter(
 
         dataset.sortedBy { item.time }
 
-
+        //
         holder.binding.nameCallTV.text = item.contact.name
         holder.binding.avatarCallIV.setImageResource(item.contact.image)
         holder.binding.lastCallTv.text = item.time

@@ -32,7 +32,7 @@ class StatusAdapter (
 
         holder.binding.nameStatusTV.text = item.name
         holder.binding.avatarStatusIV.setImageResource(item.image)
-        holder.binding.statusTV.text = item.status?.text
+        holder.binding.lastMessageTV.text = item.status?.text
 
 
     }

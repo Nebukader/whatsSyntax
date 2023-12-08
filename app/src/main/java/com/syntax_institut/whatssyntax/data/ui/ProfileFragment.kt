@@ -1,16 +1,11 @@
 package com.syntax_institut.whatssyntax.data.ui
 
 import android.os.Bundle
-import android.util.Log
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.navigation.fragment.findNavController
-import com.syntax_institut.whatssyntax.R
-import com.syntax_institut.whatssyntax.adapter.ItemAdapter
+import androidx.fragment.app.Fragment
 import com.syntax_institut.whatssyntax.data.Datasource
-import com.syntax_institut.whatssyntax.databinding.FragmentListBinding
 import com.syntax_institut.whatssyntax.databinding.FragmentProfileBinding
 
 class ProfileFragment : Fragment() {
@@ -27,8 +22,6 @@ class ProfileFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val navController = findNavController()
-
         // Daten abrufen
         val datasetProfile = Datasource().getProfile()
 
@@ -36,7 +29,5 @@ class ProfileFragment : Fragment() {
         binding.nameProfileTV.text = datasetProfile.name
         binding.phoneNumberProfileTV.text = datasetProfile.number
 
-        // Log-Ausgabe zum Überprüfen, ob Adapter gesetzt wurde
-        Log.d("ListFragment", "Adapter set successfully")
     }
 }

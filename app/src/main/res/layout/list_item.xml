@@ -3,13 +3,14 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_margin="4dp"
-    android:background="#252525"
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
     <androidx.cardview.widget.CardView
+        android:id="@+id/ChatCV"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        app:cardCornerRadius="20dp"
         >
 
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -25,7 +26,7 @@
                 android:layout_margin="8dp"
                 android:padding="5dp"
                 app:strokeWidth="2dp"
-                app:strokeColor="#380397"
+                app:strokeColor="#000000"
                 android:scaleType="centerCrop"
                 app:shapeAppearanceOverlay="@style/circular"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -46,7 +47,7 @@
                 tools:text="@tools:sample/full_names" />
 
             <TextView
-                android:id="@+id/statusTV"
+                android:id="@+id/lastMessageTV"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="32dp"
