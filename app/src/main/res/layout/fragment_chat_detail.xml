@@ -11,7 +11,7 @@
         android:id="@+id/materialToolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="?attr/colorPrimary"
+        android:background="#3C5559"
         android:minHeight="?attr/actionBarSize"
         android:theme="?attr/actionBarTheme" />
 
@@ -21,19 +21,26 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:src="?attr/homeAsUpIndicator"
+        app:tint="@color/black"
+        android:backgroundTint="#00FFFFFF"
         app:layout_constraintBottom_toBottomOf="@+id/materialToolbar"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <ImageView
+    <com.google.android.material.imageview.ShapeableImageView
         android:id="@+id/chatTargteIV"
         android:layout_width="40dp"
         android:layout_height="40dp"
         android:layout_marginStart="16dp"
+        app:shapeAppearanceOverlay="@style/circular"
+        app:strokeWidth="2dp"
+        app:strokeColor="@color/black"
+        android:scaleType="centerCrop"
         app:layout_constraintBottom_toBottomOf="@+id/materialToolbar"
         app:layout_constraintStart_toEndOf="@+id/imageButton"
         app:layout_constraintTop_toTopOf="@+id/materialToolbar"
-        tools:src="@tools:sample/avatars" />
+        tools:src="@tools:sample/avatars"
+        android:padding="2dp"/>
 
     <TextView
         android:id="@+id/textView3"
@@ -41,6 +48,9 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
         android:text="TextView"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+
         app:layout_constraintBottom_toBottomOf="@+id/materialToolbar"
         app:layout_constraintStart_toEndOf="@+id/chatTargteIV"
         app:layout_constraintTop_toTopOf="@+id/materialToolbar" />
